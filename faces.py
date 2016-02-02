@@ -52,15 +52,21 @@ def run_knn(train_in, train_targ, valid_in, valid_targ, test_in, test_targ):
     plt.xlabel("k")
     plt.axis([np.min(K_VALUES), np.max(K_VALUES), 0, 100])
     plt.grid(True)
-
     plt.ylabel("Training Classification Rate")
     plt.plot(K_VALUES, train_rates, 'go')
     plt.show()
 
+    plt.title("Classification of Actors using k-NN")
+    plt.xlabel("k")
+    plt.axis([np.min(K_VALUES), np.max(K_VALUES), 0, 100])
     plt.ylabel("Validation Classification Rate")
     plt.plot(K_VALUES, valid_rates, 'ro')
     plt.show()
 
+    plt.title("Classification of Actors using k-NN")
+    plt.xlabel("k")
+    plt.axis([np.min(K_VALUES), np.max(K_VALUES), 0, 100])
+    plt.grid(True)
     plt.ylabel("Test Classification Rate")
     plt.plot(K_VALUES, test_rates, 'bo')
     plt.show()
